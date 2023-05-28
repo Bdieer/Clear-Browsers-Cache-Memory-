@@ -1,0 +1,17 @@
+# Clear cache memory for Google Chrome
+
+$chromePath = "$($env:LOCALAPPDATA)\Google\Chrome\User Data\Default\Cache"
+
+Remove-Item $chromePath -Recurse -Force
+
+# Clear cache memory for Mozilla Firefox
+
+$firefoxPath = "$($env:LOCALAPPDATA)\Mozilla\Firefox\Profiles\*\cache2\entries"
+
+Remove-Item $firefoxPath -Recurse -Force
+
+# Clear cache memory for Microsoft Edge
+
+$edgePath = "$($env:LOCALAPPDATA)\Packages\Microsoft.MicrosoftEdge_*\AC\#!001\MicrosoftEdge\Cache"
+
+Remove-Item $edgePath -Recurse -Force
